@@ -1,0 +1,73 @@
+function bodyScrollingToggle() {
+    document.body.classList.toggle("stop-scrolling");
+}
+
+portfolioItemsContainer.addEventListener("click", (event) => {
+     if(event.target.closest(".portfolio-item-inner")){
+        const portfolioItems = event.target.closest(".porfolio-item-inner").parentElement;
+     //get the portfolioItem index
+     itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(portfolioItems);
+     screenshots = portfolioItems[itemIndex].querySelector(".portfolio-item-img img")
+     .getAttribute("data-screenshots");
+     //convert screenshots into array
+     screenshots = screenshots.split(",");
+     slideIndex = 0;
+     popToggle();
+     }
+ })
+
+ function popToggle() {
+     popup.classList.toggle("open");
+     bodyScrollingToggle();
+     }
+
+
+body.stop-scrolling{
+    overflow-y: hidden;
+
+
+
+
+
+if(event.target.hash !==""){
+      // prevent default another click behavior
+      event.preventDefault();
+      const hash = event.target.hash;
+      console.log(hash);
+      // deactivate existing active section
+      document.querySelector(".section.active").classList.add("hide");
+      document.querySelector(".section.active").classList.remove("active");
+      // active new 'section'
+      document.querySelector(hash).classList.add("active");
+      document.querySelector(hash).classList.remove("hide");
+      // deactivating existing active navigation menu "link-item"
+      // navMenu.querySelector(".active").classList.add("outer-shadow","hover-in-shadow");
+      // navMenu.querySelector(".active").classList.remove("active","inner-shadow");
+      // // activating new navigation menu "link-item"
+      // event.target.classList.add("active","inner-shadow");
+      // event.target.classList.remove("outer-shadow","hover-in-shadow");
+      // // hide navigation menu
+      // hideNavMenu();
+      
+    }
+
+
+
+    importan;;
+        if(navMenu.classList.contains("open")){
+            // activate new navigation menu "link-item"
+            event.target.classList.add("active","inner-shadow");
+            event.target.classList.remove("outer-shadow","hover-in-shadow");
+            // hide navigation menu
+            hideNavMenu();
+        }
+        else{
+            Let; navItems = navMenu.querySelectorAll(".link-item");
+            navItems.forEach((item) =>{
+            if(hash === item.hash){
+                item.classList.add("active","inner-shadow");
+                item.classList.remove("outer-shadow","hover-in-shadow");
+            }
+         })
+         fadeOutEffect();
+        }
